@@ -3,113 +3,256 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TXENECA</title>
+<title>TXENECA-MZ | Plataforma Digital de Crédito</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-    :root{
-        --red:#e63946;
-        --black:#1d1d1d;
-        --white:#ffffff;
-        --gray:#f4f4f4;
-    }
-    body { background-color: var(--white); color: var(--black); line-height:1.5; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f7fb;color:#1a1a1a}
 
-    /* HEADER */
-    header{
-        display:flex; justify-content:space-between; align-items:center;
-        padding:15px 30px; background-color: var(--black); color: var(--white);
-        position: sticky; top:0; z-index:1000;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-    header h1{ font-size:28px; font-weight:bold;}
-    .hamburger{ display:flex; flex-direction:column; cursor:pointer; gap:5px;}
-    .hamburger div{ width:25px; height:3px; background-color: var(--white); transition: all 0.3s;}
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+background:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+z-index:1000;
+}
+nav h2{color:#00c853}
+nav a{text-decoration:none;color:#333;font-weight:500;margin-left:20px}
 
-    /* CONTEÚDO PRINCIPAL */
-    .container{ max-width:1000px; margin:20px auto; padding:0 20px;}
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+padding:140px 20px 100px;
+text-align:center;
+}
+.hero h1{font-size:42px}
+.hero p{margin-top:15px;font-size:18px;opacity:0.9}
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#00c853;
+color:white;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{background:#00b248}
 
-    /* FORMULÁRIO DE CADASTRO */
-    .cadastro{
-        background-color: var(--gray); padding:30px; border-radius:12px;
-        box-shadow:0 6px 15px rgba(0,0,0,0.1); margin-bottom:40px;
-    }
-    .cadastro h2{ margin-bottom:20px; font-size:24px; text-align:center; color:var(--black);}
-    .cadastro input{
-        width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc; font-size:16px;
-    }
-    .cadastro button{
-        width:100%; padding:15px; border:none; border-radius:8px; background-color:var(--red);
-        color:var(--white); font-size:18px; cursor:pointer; transition:0.3s;
-    }
-    .cadastro button:hover{ background-color:#d62828; }
+/* SECTION */
+section{padding:80px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;margin-bottom:40px;font-size:28px}
 
-    /* QUADRADOS DE DESTAQUE */
-    .features{
-        display:flex; justify-content:space-around; gap:20px; flex-wrap:wrap; margin-bottom:40px;
-    }
-    .feature{
-        flex:1 1 200px; background-color:var(--red); color:var(--white); padding:40px;
-        text-align:center; font-weight:bold; font-size:18px; border-radius:12px;
-        box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s;
-    }
-    .feature:hover{ transform: translateY(-5px); }
+/* CADASTRO */
+.form-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+input,select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+}
 
-    /* SLIDER DE SIMULAÇÃO */
-    .slider-section{
-        background-color: var(--gray); padding:30px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);
-        margin-bottom:40px; text-align:center;
-    }
-    .slider-section h3{ margin-bottom:20px; font-size:22px; }
-    input[type=range]{ width:90%; margin:20px 0; }
-    .slider-labels{ display:flex; justify-content:space-between; width:90%; margin:auto; font-weight:bold; font-size:16px;}
-    .slider-value{ margin-top:15px; font-size:22px; font-weight:bold; color:var(--red); }
+/* SLIDER */
+.simulador{
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+text-align:center;
+}
+input[type=range]{width:100%;margin:25px 0;height:8px;background:#ddd;border-radius:5px;outline:none}
+input[type=range]::-webkit-slider-thumb{
+appearance:none;width:22px;height:22px;background:#00c853;border-radius:50%;cursor:pointer;
+}
+.valor{font-size:32px;font-weight:700;color:#00c853}
+.info-taxas{
+background:#fff8e1;
+padding:18px;
+border-radius:10px;
+margin-top:20px;
+font-size:14px;
+}
 
-    /* BOTÃO WHATSAPP */
-    .whatsapp-btn{
-        display:none; /* inicialmente escondido */
-        width:100%; padding:20px; background-color:#25D366; color:white; text-align:center;
-        border-radius:12px; font-size:20px; text-decoration:none; font-weight:bold;
-        box-shadow:0 6px 15px rgba(0,0,0,0.1); margin-bottom:40px; transition:0.3s;
-    }
-    .whatsapp-btn:hover{ background-color:#1ebe57; transform:translateY(-3px); }
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
 
-    /* RODAPÉ */
-    footer{
-        text-align:center; padding:20px; font-size:16px; color:#555;
-        border-top:1px solid #ccc; margin-top:40px;
-    }
+/* FOOTER */
+footer{
+background:#0f2027;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:60px;
+font-size:14px;
+}
 
-    /* RESPONSIVO */
-    @media(max-width:900px){
-        .features{ flex-direction:column; align-items:center;}
-    }
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+/* POPUP */
+.popup{
+position:fixed;
+bottom:90px;
+right:20px;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+display:none;
+width:260px;
+z-index:998;
+}
+.popup button{
+margin-top:10px;
+padding:8px 15px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:28px}
+.valor{font-size:24px}
+}
 </style>
 </head>
+
 <body>
 
-<header>
-    <h1>TXENECA</h1>
-    <div class="hamburger" onclick="alert('Menu clicado!')">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</header>
+<nav>
+<h2>TXENECA-MZ</h2>
+<div>
+<a href="#cadastro">Cadastro</a>
+<a href="#simular">Simular</a>
+<a href="#politica">Política</a>
+</div>
+</nav>
 
-<div class="container">
-    <!-- FORMULÁRIO DE CADASTRO -->
-    <div class="cadastro">
-        <h2>Cadastro</h2>
-        <form id="cadastroForm">
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Telefone" required>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+<div class="hero">
+<h1>Crédito Digital Simples e Transparente</h1>
+<p>Processo 100% online • Atendimento personalizado • Segurança de dados</p>
+<a href="#cadastro" class="btn">Criar Cadastro</a>
+</div>
 
-    <!-- QUADRADOS DE DESTAQUE -->
-    <div class="features">
-        <div class="feature">RAPIDEZ</div>
-        <div class="feature">ACESSIBILIDADE</div>
-        <div class="feature">TAXA ANABÓ
+<section id="cadastro">
+<h2>Cadastro do Cliente</h2>
+<div class="form-box">
+<input type="text" placeholder="Nome completo">
+<input type="tel" placeholder="Número de telefone">
+<select>
+<option>Selecionar área de trabalho</option>
+<option>Professor</option>
+<option>Comerciante</option>
+<option>Estudante</option>
+<option>Outro</option>
+</select>
+<button class="btn">Finalizar Cadastro</button>
+</div>
+</section>
+
+<section id="simular">
+<h2>Simule o seu Empréstimo</h2>
+<div class="simulador">
+<label>Escolha o valor desejado:</label>
+<input type="range" min="5000" max="200000" step="1000" value="5000"
+oninput="document.getElementById('valor').innerText=
+new Intl.NumberFormat('pt-MZ').format(this.value)+' MZN'">
+<div class="valor" id="valor">5.000 MZN</div>
+
+<div class="info-taxas">
+⚠️ A taxa de inscrição aplica-se exclusivamente no primeiro empréstimo,
+iniciando a partir de <strong>99 MZN</strong>, destinada à validação e ativação do cadastro.
+</div>
+
+<a href="https://wa.me/258867734541?text=Olá,%20quero%20informações%20sobre%20empréstimo"
+class="btn">Solicitar via WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Por que escolher a TXENECA?</h2>
+<div class="grid">
+<div class="card"><strong>✔ Processo 100% Online</strong><p>Sem deslocações.</p></div>
+<div class="card"><strong>✔ Atendimento Personalizado</strong><p>Assistente Márcia disponível.</p></div>
+<div class="card"><strong>✔ Transparência Total</strong><p>Condições claras antes da contratação.</p></div>
+</div>
+</section>
+
+<section id="politica">
+<h2>Política de Proteção de Dados</h2>
+<div class="card">
+<p>Os dados fornecidos são utilizados exclusivamente para análise de crédito.
+Comprometemo-nos com confidencialidade e segurança digital.</p>
+</div>
+</section>
+
+<section>
+<h2>Termos e Condições</h2>
+<div class="card">
+<p>A aprovação está sujeita à análise interna.
+A taxa de inscrição aplica-se apenas no primeiro empréstimo.
+Ao solicitar, o cliente confirma que as informações são verdadeiras.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 TXENECA-MZ • Todos os direitos reservados</p>
+<p>Assistente Márcia: 867734541</p>
+</footer>
+
+<div class="popup" id="popup">
+<strong>Assistente Márcia</strong>
+<p>Precisa de ajuda? Estou disponível agora.</p>
+<button onclick="window.location.href='https://wa.me/258867734541'">
+Falar Agora
+</button>
+</div>
+
+<a href="https://wa.me/258867734541" class="whatsapp">💬 Atendimento Online</a>
+
+<script>
+setTimeout(function(){
+document.getElementById("popup").style.display="block";
+},5000);
+</script>
+
+</body>
+   </html>
