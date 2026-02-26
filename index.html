@@ -3,256 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TXENECA-MZ | Plataforma Digital de Crédito</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>TXENECA Crédito & Soluções Financeiras</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f4f7fb;color:#1a1a1a}
-
-/* NAV */
-nav{
-position:fixed;
-width:100%;
-background:white;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-z-index:1000;
-}
-nav h2{color:#00c853}
-nav a{text-decoration:none;color:#333;font-weight:500;margin-left:20px}
-
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-padding:140px 20px 100px;
-text-align:center;
-}
-.hero h1{font-size:42px}
-.hero p{margin-top:15px;font-size:18px;opacity:0.9}
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 35px;
-background:#00c853;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-.btn:hover{background:#00b248}
-
-/* SECTION */
-section{padding:80px 20px;max-width:1100px;margin:auto}
-h2{text-align:center;margin-bottom:40px;font-size:28px}
-
-/* CADASTRO */
-.form-box{
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-}
-input,select{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:8px;
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    color:#1a1a1a;
 }
 
-/* SLIDER */
-.simulador{
-background:white;
-padding:50px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-text-align:center;
-}
-input[type=range]{width:100%;margin:25px 0;height:8px;background:#ddd;border-radius:5px;outline:none}
-input[type=range]::-webkit-slider-thumb{
-appearance:none;width:22px;height:22px;background:#00c853;border-radius:50%;cursor:pointer;
-}
-.valor{font-size:32px;font-weight:700;color:#00c853}
-.info-taxas{
-background:#fff8e1;
-padding:18px;
-border-radius:10px;
-margin-top:20px;
-font-size:14px;
+header {
+    background:#0A1F44;
+    color:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+header h1 {
+    margin:0;
+    font-size:22px;
 }
 
-/* FOOTER */
-footer{
-background:#0f2027;
-color:white;
-text-align:center;
-padding:40px 20px;
-margin-top:60px;
-font-size:14px;
+nav a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:14px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-box-shadow:0 6px 20px rgba(0,0,0,0.3);
-z-index:999;
+.hero {
+    padding:80px 10%;
+    background:white;
 }
 
-/* POPUP */
-.popup{
-position:fixed;
-bottom:90px;
-right:20px;
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-display:none;
-width:260px;
-z-index:998;
-}
-.popup button{
-margin-top:10px;
-padding:8px 15px;
-background:#00c853;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
+.hero h2 {
+    font-size:34px;
+    color:#0A1F44;
 }
 
-@media(max-width:600px){
-.hero h1{font-size:28px}
-.valor{font-size:24px}
+.hero p {
+    font-size:18px;
+    margin-top:10px;
+    max-width:600px;
+}
+
+.btn-primary {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#0A1F44;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.section {
+    padding:60px 10%;
+}
+
+.section h3 {
+    color:#0A1F44;
+    margin-bottom:20px;
+}
+
+.card {
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom:15px;
+}
+
+input, select {
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+footer {
+    background:#0A1F44;
+    color:white;
+    text-align:center;
+    padding:30px 10%;
+    font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<h1>TXENECA Crédito & Soluções Financeiras</h1>
 <nav>
-<h2>TXENECA-MZ</h2>
-<div>
+<a href="#como">Como Funciona</a>
+<a href="#condicoes">Condições</a>
 <a href="#cadastro">Cadastro</a>
-<a href="#simular">Simular</a>
-<a href="#politica">Política</a>
-</div>
 </nav>
+</header>
 
-<div class="hero">
-<h1>Crédito Digital Simples e Transparente</h1>
-<p>Processo 100% online • Atendimento personalizado • Segurança de dados</p>
-<a href="#cadastro" class="btn">Criar Cadastro</a>
+<section class="hero">
+<h2>Crédito Responsável, Transparente e Seguro</h2>
+<p>Oferecemos soluções financeiras estruturadas, com análise responsável e condições claras para clientes em Moçambique.</p>
+<a href="#cadastro" class="btn-primary">Solicitar Crédito</a>
+</section>
+
+<section id="como" class="section">
+<h3>Como Funciona</h3>
+
+<div class="card">
+<strong>1. Cadastro Seguro</strong>
+<p>Preencha seus dados completos para análise inicial.</p>
 </div>
 
-<section id="cadastro">
-<h2>Cadastro do Cliente</h2>
-<div class="form-box">
-<input type="text" placeholder="Nome completo">
-<input type="tel" placeholder="Número de telefone">
-<select>
-<option>Selecionar área de trabalho</option>
-<option>Professor</option>
-<option>Comerciante</option>
-<option>Estudante</option>
+<div class="card">
+<strong>2. Análise e Validação</strong>
+<p>Nossa equipe realiza verificação interna conforme critérios de elegibilidade.</p>
+</div>
+
+<div class="card">
+<strong>3. Formalização Contratual</strong>
+<p>Em caso de aprovação, o cliente recebe contrato digital com todas as condições detalhadas.</p>
+</div>
+
+<div class="card">
+<strong>4. Desembolso</strong>
+<p>Transferência realizada pelos meios eletrónicos disponíveis.</p>
+</div>
+
+</section>
+
+<section id="condicoes" class="section">
+<h3>Condições e Transparência</h3>
+
+<div class="card">
+<p><strong>Valores disponíveis:</strong> 5.000 MZN até 200.000 MZN</p>
+<p><strong>Análise:</strong> Sujeita a critérios internos.</p>
+<p><strong>Taxa administrativa:</strong> Aplicável conforme contrato e informada previamente ao cliente.</p>
+<p>Não realizamos cobranças ocultas. Todas as condições são formalizadas antes da contratação.</p>
+</div>
+
+</section>
+
+<section id="cadastro" class="section">
+<h3>Cadastro Inicial</h3>
+
+<div class="card">
+<form>
+<div class="form-group">
+<input type="text" placeholder="Nome Completo" required>
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Número de BI" required>
+</div>
+
+<div class="form-group">
+<input type="tel" placeholder="Número de Telefone" required>
+</div>
+
+<div class="form-group">
+<select required>
+<option value="">Selecione sua área de trabalho</option>
+<option>Funcionário Público</option>
+<option>Empresário</option>
+<option>Trabalhador Informal</option>
 <option>Outro</option>
 </select>
-<button class="btn">Finalizar Cadastro</button>
-</div>
-</section>
-
-<section id="simular">
-<h2>Simule o seu Empréstimo</h2>
-<div class="simulador">
-<label>Escolha o valor desejado:</label>
-<input type="range" min="5000" max="200000" step="1000" value="5000"
-oninput="document.getElementById('valor').innerText=
-new Intl.NumberFormat('pt-MZ').format(this.value)+' MZN'">
-<div class="valor" id="valor">5.000 MZN</div>
-
-<div class="info-taxas">
-⚠️ A taxa de inscrição aplica-se exclusivamente no primeiro empréstimo,
-iniciando a partir de <strong>99 MZN</strong>, destinada à validação e ativação do cadastro.
 </div>
 
-<a href="https://wa.me/258867734541?text=Olá,%20quero%20informações%20sobre%20empréstimo"
-class="btn">Solicitar via WhatsApp</a>
+<div class="form-group">
+<input type="number" placeholder="Valor Pretendido (MZN)" required>
 </div>
-</section>
 
-<section>
-<h2>Por que escolher a TXENECA?</h2>
-<div class="grid">
-<div class="card"><strong>✔ Processo 100% Online</strong><p>Sem deslocações.</p></div>
-<div class="card"><strong>✔ Atendimento Personalizado</strong><p>Assistente Márcia disponível.</p></div>
-<div class="card"><strong>✔ Transparência Total</strong><p>Condições claras antes da contratação.</p></div>
+<button type="submit" class="btn-primary">Enviar Solicitação</button>
+</form>
 </div>
-</section>
 
-<section id="politica">
-<h2>Política de Proteção de Dados</h2>
-<div class="card">
-<p>Os dados fornecidos são utilizados exclusivamente para análise de crédito.
-Comprometemo-nos com confidencialidade e segurança digital.</p>
-</div>
-</section>
-
-<section>
-<h2>Termos e Condições</h2>
-<div class="card">
-<p>A aprovação está sujeita à análise interna.
-A taxa de inscrição aplica-se apenas no primeiro empréstimo.
-Ao solicitar, o cliente confirma que as informações são verdadeiras.</p>
-</div>
 </section>
 
 <footer>
-<p>© 2026 TXENECA-MZ • Todos os direitos reservados</p>
-<p>Assistente Márcia: 867734541</p>
+TXENECA Crédito & Soluções Financeiras, Lda<br>
+Atendimento: Segunda a Sexta | 08:00 - 17:00<br>
+Email: suporte@txeneca.co.mz
 </footer>
-
-<div class="popup" id="popup">
-<strong>Assistente Márcia</strong>
-<p>Precisa de ajuda? Estou disponível agora.</p>
-<button onclick="window.location.href='https://wa.me/258867734541'">
-Falar Agora
-</button>
-</div>
-
-<a href="https://wa.me/258867734541" class="whatsapp">💬 Atendimento Online</a>
-
-<script>
-setTimeout(function(){
-document.getElementById("popup").style.display="block";
-},5000);
-</script>
 
 </body>
    </html>
