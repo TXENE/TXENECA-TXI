@@ -3,245 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TXENECA-MZ | Plataforma Digital de Crédito</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Txuna Finance</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-
-body{background:#f4f7fb;color:#222}
-
-/* HEADER */
-header{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-padding:90px 20px;
-text-align:center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header h1{font-size:40px;font-weight:700}
-header p{margin-top:15px;font-size:18px;opacity:0.9}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 35px;
-background:#00c853;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-.btn:hover{background:#00b248}
-
-/* SECTION */
-section{
-padding:70px 20px;
-max-width:1100px;
-margin:auto;
+body {
+    background: #f4f6f9;
 }
 
-h2{text-align:center;margin-bottom:40px;font-size:28px}
-
-/* SIMULADOR */
-.simulador{
-background:white;
-padding:50px;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-text-align:center;
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
 }
 
-input[type=range]{
-width:100%;
-margin:30px 0;
-height:8px;
-appearance:none;
-background:#ddd;
-border-radius:5px;
-outline:none;
-}
-input[type=range]::-webkit-slider-thumb{
-appearance:none;
-width:22px;
-height:22px;
-background:#00c853;
-border-radius:50%;
-cursor:pointer;
+nav h1 {
+    color: #0d3b66;
 }
 
-.valor{
-font-size:32px;
-font-weight:700;
-color:#00c853;
-margin-bottom:15px;
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.info-taxas{
-background:#fff8e1;
-padding:18px;
-border-radius:10px;
-font-size:14px;
-margin-top:20px;
+nav ul li {
+    cursor: pointer;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #0d3b66, #0b2545);
+    color: white;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-footer{
-background:#0f2027;
-color:white;
-text-align:center;
-padding:40px 20px;
-font-size:14px;
-margin-top:50px;
+.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-box-shadow:0 6px 20px rgba(0,0,0,0.3);
-z-index:999;
+.btn-green {
+    background: #28a745;
+    color: white;
 }
 
-/* POPUP ASSISTENTE */
-.popup{
-position:fixed;
-bottom:90px;
-right:20px;
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-display:none;
-width:260px;
-z-index:998;
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
 }
 
-.popup button{
-margin-top:10px;
-padding:8px 15px;
-background:#00c853;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 20px;
+    margin-top: -20px;
+    border-radius: 10px;
 }
 
-@media(max-width:600px){
-header h1{font-size:28px}
-.valor{font-size:24px}
+.stat {
+    text-align: center;
+}
+
+/* DASHBOARD */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background: #0b2545;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+.green { background: #28a745; color: white; }
+.blue { background: #007bff; color: white; }
+.orange { background: #fd7e14; color: white; }
+.purple { background: #6f42c1; color: white; }
+
+/* FORMS */
+.forms {
+    display: flex;
+    gap: 20px;
+}
+
+.form-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* FOOTER STEPS */
+.steps {
+    background: #0b2545;
+    color: white;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.steps div {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>TXENECA-MZ</h1>
-<p>Plataforma digital de crédito com processo simples e transparente.</p>
-<a href="#simulador" class="btn">Simular Empréstimo</a>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h1>Txuna Finance</h1>
+    <ul>
+        <li>Início</li>
+        <li>Poupança</li>
+        <li>Empréstimos</li>
+        <li>Contato</li>
+    </ul>
+</nav>
 
-<section id="simulador">
-<h2>Simule o seu Empréstimo</h2>
-
-<div class="simulador">
-<label>Escolha o valor desejado:</label>
-
-<input type="range" min="5000" max="200000" step="1000" value="5000"
-oninput="document.getElementById('valor').innerText =
-new Intl.NumberFormat('pt-MZ').format(this.value)+' MZN'">
-
-<div class="valor" id="valor">5.000 MZN</div>
-
-<div class="info-taxas">
-⚠️ A taxa de inscrição aplica-se exclusivamente no primeiro empréstimo,
-a partir de <strong>99 MZN</strong>, destinada à validação cadastral e ativação do perfil.
-</div>
-
-<a href="https://wa.me/258867734541?text=Olá,%20quero%20simular%20um%20empréstimo"
-class="btn">Solicitar via WhatsApp</a>
-</div>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h2>Poupe hoje, conquiste seus sonhos amanhã</h2>
+        <p>Ajudamos você a crescer financeiramente com segurança.</p>
+        <br>
+        <button class="btn btn-green">Começar Agora</button>
+        <button class="btn btn-outline">Saiba Mais</button>
+    </div>
 </section>
 
-<section>
-<h2>Por que escolher a TXENECA?</h2>
-<div class="cards">
-<div class="card">
-<strong>✔ Processo 100% Online</strong>
-<p>Solicite seu crédito sem sair de casa.</p>
-</div>
-
-<div class="card">
-<strong>✔ Atendimento Personalizado</strong>
-<p>Assistente Márcia disponível para suporte direto.</p>
-</div>
-
-<div class="card">
-<strong>✔ Transparência Total</strong>
-<p>Taxas claramente informadas antes da contratação.</p>
-</div>
-</div>
+<!-- STATS -->
+<section class="stats">
+    <div class="stat"><h3>1,245+</h3><p>Clientes</p></div>
+    <div class="stat"><h3>2,450,000 MZN</h3><p>Poupança</p></div>
+    <div class="stat"><h3>980,000 MZN</h3><p>Empréstimos</p></div>
+    <div class="stat"><h3>98%</h3><p>Satisfação</p></div>
 </section>
 
-<section>
-<h2>Política de Proteção de Dados</h2>
-<div class="card">
-<p>Os dados fornecidos são utilizados exclusivamente para análise de crédito.
-A TXENECA-MZ compromete-se com confidencialidade e segurança digital.</p>
+<!-- DASHBOARD -->
+<div class="container">
+
+    <div class="sidebar">
+        <h3>Área do Cliente</h3>
+        <ul>
+            <li>Dashboard</li>
+            <li>Minha Poupança</li>
+            <li>Meus Empréstimos</li>
+            <li>Transações</li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <div class="cards">
+            <div class="card green">Saldo: 8,250 MZN</div>
+            <div class="card blue">A receber: 4,200 MZN</div>
+            <div class="card orange">Em análise: 1</div>
+            <div class="card purple">+500 MZN</div>
+        </div>
+
+        <div class="forms">
+            <div class="form-box">
+                <h3>Fazer Poupança</h3>
+                <input type="text" placeholder="Valor">
+                <select><option>Método</option></select>
+                <button class="btn btn-green">Depositar</button>
+            </div>
+
+            <div class="form-box">
+                <h3>Solicitar Empréstimo</h3>
+                <input type="text" placeholder="Valor">
+                <select><option>Prazo</option></select>
+                <button class="btn" style="background:#007bff;color:white;">Solicitar</button>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<!-- STEPS -->
+<section class="steps">
+    <h2>Como Funciona?</h2>
+    <div>
+        <div>1<br>Cadastro</div>
+        <div>2<br>Poupança</div>
+        <div>3<br>Empréstimo</div>
+        <div>4<br>Pagamento</div>
+    </div>
 </section>
-
-<section>
-<h2>Termos e Condições</h2>
-<div class="card">
-<p>A aprovação do crédito está sujeita à análise interna.
-A taxa de inscrição aplica-se apenas no primeiro empréstimo.
-Ao solicitar, o cliente confirma que as informações fornecidas são verdadeiras.</p>
-</div>
-</section>
-
-<footer>
-<p>© 2026 TXENECA-MZ • Todos os direitos reservados</p>
-<p>Assistente Márcia: 867734541</p>
-</footer>
-
-<div class="popup" id="popup">
-<strong>Assistente Márcia</strong>
-<p>Precisa de ajuda? Estou disponível agora.</p>
-<button onclick="window.location.href='https://wa.me/258867734541'">
-Falar Agora
-</button>
-</div>
-
-<a href="https://wa.me/258867734541?text=Olá,%20preciso%20de%20informações"
-class="whatsapp">💬 Atendimento Online</a>
-
-<script>
-setTimeout(function(){
-document.getElementById("popup").style.display="block";
-},5000);
-</script>
 
 </body>
     </html>
